@@ -66,7 +66,7 @@ const Index = () => {
               className="rounded-lg object-cover w-full h-[400px] shadow-2xl transform group-hover:scale-105 transition-all duration-300"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 glass-card rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-sm text-white">Modern construction project showcasing innovative design and sustainable materials</p>
+              <p className="text-sm text-orange-800 font-medium">Modern construction project showcasing innovative design and sustainable materials</p>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@ const Index = () => {
                     className="rounded-lg object-cover w-full h-[300px] shadow-xl transform group-hover:scale-105 transition-all duration-300"
                   />
                   <div className="absolute bottom-4 left-4 right-4 p-4 glass-card rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-sm text-white">{t(`process.step${step}.imageDescription`)}</p>
+                    <p className="text-sm text-orange-800 font-medium">{t(`process.step${step}.imageDescription`)}</p>
                   </div>
                 </div>
               </div>
@@ -127,7 +127,7 @@ const Index = () => {
                 className="rounded-lg object-cover w-full h-[400px] shadow-xl transform group-hover:scale-105 transition-all duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 p-4 glass-card rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-sm text-white">Comprehensive guide to understanding load-bearing walls and structural modifications</p>
+                <p className="text-sm text-orange-800 font-medium">Comprehensive guide to understanding load-bearing walls and structural modifications</p>
               </div>
             </div>
             <Accordion type="single" collapsible className="w-full space-y-4">
@@ -182,7 +182,7 @@ const Index = () => {
               className="rounded-lg object-cover w-full h-[400px] shadow-xl transform group-hover:scale-105 transition-all duration-300"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 glass-card rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-sm text-white">Transparent pricing and detailed cost breakdown for structural modifications</p>
+              <p className="text-sm text-orange-800 font-medium">Transparent pricing and detailed cost breakdown for structural modifications</p>
             </div>
           </div>
         </div>
@@ -204,3 +204,4 @@ const Index = () => {
 };
 
 export default Index;
+
