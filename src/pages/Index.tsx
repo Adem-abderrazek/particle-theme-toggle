@@ -23,7 +23,7 @@ const Index = () => {
   }, [isDark]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-secondary/30 to-primary/20 backdrop-blur-sm transition-all duration-500">
+    <div className="min-h-screen bg-gradient-to-b from-orange-100/30 to-orange-200/20 backdrop-blur-sm transition-all duration-500">
       <ParticleBackground />
       
       {/* Language and Theme Toggles */}
@@ -31,14 +31,14 @@ const Index = () => {
         <Button
           variant="outline"
           onClick={() => setLanguage(language === "fr" ? "en" : "fr")}
-          className="glass-button hover:scale-105 transition-transform duration-300"
+          className="glass-button hover:scale-105 transition-transform duration-300 text-orange-500"
         >
           {language === "fr" ? "EN" : "FR"}
         </Button>
         <Button
           variant="outline"
           onClick={() => setIsDark(!isDark)}
-          className="glass-button hover:scale-105 transition-transform duration-300"
+          className="glass-button hover:scale-105 transition-transform duration-300 text-orange-500"
         >
           {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
         </Button>
@@ -48,13 +48,13 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600">
               {t("hero.title")}
             </h1>
-            <p className="text-xl mb-8 text-gray-700 dark:text-gray-300">
+            <p className="text-xl mb-8 text-orange-700 dark:text-orange-300">
               {t("hero.subtitle")}
             </p>
-            <Button size="lg" className="glass-button animate-float">
+            <Button size="lg" className="glass-button animate-float bg-orange-500 text-white hover:bg-orange-600">
               {t("hero.cta")}
             </Button>
           </div>
@@ -75,7 +75,7 @@ const Index = () => {
       {/* Process Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600">
             {t("process.title")}
           </h2>
           <div className="space-y-24">
@@ -88,17 +88,17 @@ const Index = () => {
               >
                 <div className={`space-y-4 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                   <div className="flex items-center gap-4">
-                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600">
                       0{step}
                     </span>
-                    <h4 className="text-xl font-semibold">{t(`process.step${step}.title`)}</h4>
+                    <h4 className="text-xl font-semibold text-orange-700 dark:text-orange-300">{t(`process.step${step}.title`)}</h4>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">{t(`process.step${step}.description`)}</p>
+                  <p className="text-orange-700 dark:text-orange-300">{t(`process.step${step}.description`)}</p>
                 </div>
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg transform -rotate-3 group-hover:rotate-0 transition-transform duration-300"></div>
                   <img
-                    src={`https://images.unsplash.com/photo-148${6718448742 + step}`}
+                    src={`https://images.unsplash.com/photo-1487958449943-2429e8be8625`}
                     alt={`Process step ${step}`}
                     className="rounded-lg object-cover w-full h-[300px] shadow-xl transform group-hover:scale-105 transition-all duration-300"
                   />
@@ -115,7 +115,7 @@ const Index = () => {
       {/* Guide Section */}
       <section className="py-20 px-4 glass">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600">
             GUIDE PRATIQUE
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -164,13 +164,13 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600">
               Quels sont les tarifs pour ouvrir un mur porteur?
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-8">
+            <p className="text-orange-700 dark:text-orange-300 mb-8">
               Lorsque vous sollicitez ARCIVIL pour une étude structurelle...
             </p>
-            <Button size="lg" className="glass-button animate-float">
+            <Button size="lg" className="glass-button animate-float bg-orange-500 text-white hover:bg-orange-600">
               {t("hero.cta")}
             </Button>
           </div>
@@ -191,10 +191,10 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-20 px-4 glass">
         <div className="container mx-auto text-center space-y-8">
-          <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600">
             {t("contact.title")}
           </h2>
-          <Button size="lg" variant="outline" className="glass-button animate-float">
+          <Button size="lg" variant="outline" className="glass-button animate-float text-orange-500 hover:text-orange-600">
             {t("hero.cta")}
           </Button>
         </div>
