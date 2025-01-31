@@ -45,16 +45,16 @@
     --popover: 34 10% 15%;
     --popover-foreground: 0 0% 98%;
     
-    --primary: 262 60% 75%;  /* Primary Purple: #9b87f5 */
+    --primary: 262 60% 75%;
     --primary-foreground: 34 10% 15%;
     
-    --secondary: 261 28% 54%;  /* Secondary Purple: #7E69AB */
+    --secondary: 261 28% 54%;
     --secondary-foreground: 0 0% 98%;
     
-    --muted: 240 5% 64%;  /* Neutral Gray: #8E9196 */
+    --muted: 240 5% 64%;
     --muted-foreground: 0 0% 98%;
     
-    --accent: 199 86% 49%;  /* Ocean Blue: #0EA5E9 */
+    --accent: 199 86% 49%;
     --accent-foreground: 0 0% 98%;
     
     --destructive: 0 63% 31%;
@@ -76,7 +76,6 @@
 }
 
 @layer components {
-  /* Glass Effects */
   .glass {
     @apply backdrop-blur-lg bg-white/10 border border-white/20;
   }
@@ -85,62 +84,10 @@
     @apply backdrop-blur-md bg-white/30 border border-white/30 shadow-xl;
   }
   
-  /* Construction Theme */
-  .hexagon-clip {
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  .glass-button {
+    @apply backdrop-blur-sm bg-white/20 hover:bg-white/30 border border-white/30 transition-all duration-300;
   }
 
-  .caution-border {
-    border: 5px solid transparent;
-    border-image: repeating-linear-gradient(
-      -45deg,
-      #FFD700 0%,
-      #FFD700 25%,
-      #221F26 25%,
-      #221F26 50%
-    ) 10;
-  }
-
-  .blueprint-overlay {
-    position: relative;
-  }
-
-  .blueprint-overlay::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(0deg, 
-      rgba(14, 165, 233, 0.05) 1px,
-      transparent 1px),
-      linear-gradient(90deg, 
-      rgba(14, 165, 233, 0.05) 1px, 
-      transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.3;
-  }
-
-  .scaffolding-overlay {
-    position: relative;
-  }
-
-  .scaffolding-overlay::before {
-    content: "⚠ Under Construction ⚠";
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(34, 31, 38, 0.9);
-    color: #FFD700;
-    padding: 5px 10px;
-    font-weight: bold;
-    border-radius: 5px;
-    z-index: 10;
-  }
-
-  /* Animations */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -152,5 +99,20 @@
     50% {
       transform: translateY(-20px);
     }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
   }
 }
